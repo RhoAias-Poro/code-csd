@@ -12,13 +12,13 @@ public class MyList {
        return (head == null);
    }
    
-   void clear(){ // Clear SingleList
+   void clear(){ // Clear SingleList, but not delete single node
        head = tail = null; 
    }
    
-   void addLast(Student x)
+   void addLast(Student x) // Add a node to the last of the linklist
    {
-       Node q = new Node(x);
+       Node q = new Node(x); //info = x , next = null
        {
            if(isEmpty()){
                head = tail = q;
@@ -360,7 +360,7 @@ public class MyList {
             h = n - 1;
         }
         Node u = pos(k);
-        Node v = pos(h);
+        Node v = pos(h+1);
         Node pi, pj;
         Student x;
         pi = u;
